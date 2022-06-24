@@ -1,0 +1,125 @@
+Testsuite: simpledb.BTreeInternalPageTest
+Tests run: 11, Failures: 0, Errors: 11, Skipped: 0, Time elapsed: 0.099 sec
+
+Testcase: addEntry took 0.037 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.BTreeInternalPageTest.addEntry(BTreeInternalPageTest.java:221)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testDirty took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.BTreeInternalPageTest.testDirty(BTreeInternalPageTest.java:204)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: deleteEntry took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.BTreeInternalPageTest.deleteEntry(BTreeInternalPageTest.java:296)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: setParentId took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.BTreeInternalPageTest.setParentId(BTreeInternalPageTest.java:105)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: getParentId took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.BTreeInternalPageTest.getParentId(BTreeInternalPageTest.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testReverseIterator took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.BTreeInternalPageTest.testReverseIterator(BTreeInternalPageTest.java:156)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: getSlot took 0 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.BTreeInternalPageTest.getSlot(BTreeInternalPageTest.java:189)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: getId took 0 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.BTreeInternalPageTest.getId(BTreeInternalPageTest.java:89)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: deleteNonexistentEntry took 0.001 sec
+	Caused an ERROR
+Unexpected exception, expected<simpledb.common.DbException> but was<java.lang.NullPointerException>
+java.lang.Exception: Unexpected exception, expected<simpledb.common.DbException> but was<java.lang.NullPointerException>
+Caused by: java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.BTreeInternalPageTest.deleteNonexistentEntry(BTreeInternalPageTest.java:288)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: getNumEmptySlots took 0 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.BTreeInternalPageTest.getNumEmptySlots(BTreeInternalPageTest.java:181)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testIterator took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.BTreeInternalPageTest.testIterator(BTreeInternalPageTest.java:131)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

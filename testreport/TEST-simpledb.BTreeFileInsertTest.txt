@@ -1,0 +1,44 @@
+Testsuite: simpledb.BTreeFileInsertTest
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.13 sec
+
+Testcase: testReusePage took 0.048 sec
+	Caused an ERROR
+Cannot invoke "simpledb.index.BTreeRootPtrPage.getHeaderId()" because "rootPtr" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.index.BTreeRootPtrPage.getHeaderId()" because "rootPtr" is null
+	at simpledb.index.BTreeFile.setEmptyPage(BTreeFile.java:983)
+	at simpledb.BTreeFileInsertTest.testReusePage(BTreeFileInsertTest.java:150)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testSplitInternalPages took 0.008 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.index.BTreeUtility.createRandomInternalPage(BTreeUtility.java:363)
+	at simpledb.index.BTreeUtility.createRandomInternalPage(BTreeUtility.java:345)
+	at simpledb.BTreeFileInsertTest.testSplitInternalPages(BTreeFileInsertTest.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testSplitLeafPages took 0.004 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.Field.compare(simpledb.execution.Predicate$Op, simpledb.storage.Field)" because the return value of "simpledb.storage.Tuple.getField(int)" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.Field.compare(simpledb.execution.Predicate$Op, simpledb.storage.Field)" because the return value of "simpledb.storage.Tuple.getField(int)" is null
+	at simpledb.index.BTreeFileEncoder$TupleComparator.compare(BTreeFileEncoder.java:134)
+	at simpledb.index.BTreeFileEncoder$TupleComparator.compare(BTreeFileEncoder.java:115)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:234)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at simpledb.index.BTreeFileEncoder.convertToLeafPage(BTreeFileEncoder.java:554)
+	at simpledb.index.BTreeUtility.createRandomLeafPage(BTreeUtility.java:316)
+	at simpledb.index.BTreeUtility.createRandomLeafPage(BTreeUtility.java:299)
+	at simpledb.BTreeFileInsertTest.testSplitLeafPages(BTreeFileInsertTest.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

@@ -1,0 +1,57 @@
+Testsuite: simpledb.TupleDescTest
+Tests run: 6, Failures: 5, Errors: 1, Skipped: 0, Time elapsed: 0.067 sec
+
+Testcase: getSize took 0.008 sec
+	Caused an ERROR
+expected:<4> but was:<0>
+java.lang.AssertionError: expected:<4> but was:<0>
+	at simpledb.TupleDescTest.getSize(TupleDescTest.java:135)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: getType took 0 sec
+	Caused an ERROR
+expected:<INT_TYPE> but was:<null>
+java.lang.AssertionError: expected:<INT_TYPE> but was:<null>
+	at simpledb.TupleDescTest.getType(TupleDescTest.java:82)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: numFields took 0 sec
+	Caused an ERROR
+expected:<1> but was:<0>
+java.lang.AssertionError: expected:<1> but was:<0>
+	at simpledb.TupleDescTest.numFields(TupleDescTest.java:147)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: combine took 0.003 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.numFields()" because "td3" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.numFields()" because "td3" is null
+	at simpledb.TupleDescTest.combine(TupleDescTest.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testEquals took 0.001 sec
+	Caused an ERROR
+expected: simpledb.storage.TupleDesc<> but was: simpledb.storage.TupleDesc<>
+java.lang.AssertionError: expected: simpledb.storage.TupleDesc<> but was: simpledb.storage.TupleDesc<>
+	at simpledb.TupleDescTest.testEquals(TupleDescTest.java:163)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: nameToId took 0.001 sec
+	Caused an ERROR
+foo is not a valid field name
+java.lang.AssertionError: foo is not a valid field name
+	at simpledb.TupleDescTest.nameToId(TupleDescTest.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

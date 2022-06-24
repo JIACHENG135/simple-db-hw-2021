@@ -1,0 +1,87 @@
+Testsuite: simpledb.systemtest.BTreeFileDeleteTest
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.347 sec
+
+Testcase: testRedistributeLeafPages took 0.054 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:211)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:181)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:160)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:122)
+	at simpledb.systemtest.BTreeFileDeleteTest.testRedistributeLeafPages(BTreeFileDeleteTest.java:45)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testDeleteInternalPages took 0.047 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:211)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:181)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:160)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:122)
+	at simpledb.systemtest.BTreeFileDeleteTest.testDeleteInternalPages(BTreeFileDeleteTest.java:261)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testReuseDeletedPages took 0.01 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:211)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:181)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:160)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:122)
+	at simpledb.systemtest.BTreeFileDeleteTest.testReuseDeletedPages(BTreeFileDeleteTest.java:159)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testDeleteRootPage took 0.009 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:211)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:181)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:160)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:122)
+	at simpledb.systemtest.BTreeFileDeleteTest.testDeleteRootPage(BTreeFileDeleteTest.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testMergeLeafPages took 0.011 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:211)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:181)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:160)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:122)
+	at simpledb.systemtest.BTreeFileDeleteTest.testMergeLeafPages(BTreeFileDeleteTest.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testRedistributeInternalPages took 0.164 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:211)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:181)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:160)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:122)
+	at simpledb.systemtest.BTreeFileDeleteTest.testRedistributeInternalPages(BTreeFileDeleteTest.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

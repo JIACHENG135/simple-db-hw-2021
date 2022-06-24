@@ -27,8 +27,18 @@ public class Catalog {
      * Constructor.
      * Creates a new, empty catalog.
      */
+    private HashMap<String, String> namePkeyMap;
+    private HashMap<String, Integer> nameIdMap;
+    private HashMap<Integer, TupleDesc> fidTupleDescMap;
+    private HashMap<Integer, DbFile> fidDbMap;
+    private HashMap<Integer, String> fidNameMap;
     public Catalog() {
         // some code goes here
+        this.nameIdMap = new HashMap<>();
+        this.namePkeyMap = new HashMap<>();
+        this.fidTupleDescMap = new HashMap<>();
+        this.fidDbMap = new HashMap<>();
+        this.fidNameMap = new HashMap<>();
     }
 
     /**
@@ -41,6 +51,13 @@ public class Catalog {
      * @param pkeyField the name of the primary key field
      */
     public void addTable(DbFile file, String name, String pkeyField) {
+        int fid = file.getId();
+        TupleDesc td = file.getTupleDesc();
+        this.nameIdMap.put(name,fid);
+        this.namePkeyMap.put(name,pkeyField);
+        this.fidTupleDescMap.put(fid, td);
+        this.fidDbMap.put(fid,file);
+        this.fidNameMap.put(fid,name);
         // some code goes here
     }
 
@@ -64,8 +81,12 @@ public class Catalog {
      * @throws NoSuchElementException if the table doesn't exist
      */
     public int getTableId(String name) throws NoSuchElementException {
-        // some code goes here
-        return 0;
+        try{
+            int fid =  this.nameIdMap.get(name);
+            return fid;
+        }catch (Exception e){
+            throw new NoSuchElementException();
+        }
     }
 
     /**
@@ -75,8 +96,12 @@ public class Catalog {
      * @throws NoSuchElementException if the table doesn't exist
      */
     public TupleDesc getTupleDesc(int tableid) throws NoSuchElementException {
-        // some code goes here
-        return null;
+        try{
+            TupleDesc td =  this.fidTupleDescMap.get(tableid);
+            return td;
+        }catch (Exception e){
+            throw new NoSuchElementException();
+        }
     }
 
     /**
@@ -86,8 +111,12 @@ public class Catalog {
      *     function passed to addTable
      */
     public DbFile getDatabaseFile(int tableid) throws NoSuchElementException {
-        // some code goes here
-        return null;
+        try{
+            DbFile db=  this.fidDbMap.get(tableid);
+            return db;
+        }catch (Exception e){
+            throw new NoSuchElementException();
+        }
     }
 
     public String getPrimaryKey(int tableid) {
@@ -101,8 +130,12 @@ public class Catalog {
     }
 
     public String getTableName(int id) {
-        // some code goes here
-        return null;
+        try{
+            String name=  this.fidNameMap.get(id);
+            return name;
+        }catch (Exception e){
+            throw new NoSuchElementException();
+        }
     }
     
     /** Delete all tables from the catalog */

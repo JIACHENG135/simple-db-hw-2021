@@ -1,0 +1,19 @@
+Testsuite: simpledb.BTreeLeafPageTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec
+
+	Caused an ERROR
+null
+java.lang.ExceptionInInitializerError
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+Caused by: java.lang.NullPointerException: Cannot invoke "simpledb.storage.Field.compare(simpledb.execution.Predicate$Op, simpledb.storage.Field)" because the return value of "simpledb.storage.Tuple.getField(int)" is null
+	at simpledb.index.BTreeFileEncoder$TupleComparator.compare(BTreeFileEncoder.java:134)
+	at simpledb.index.BTreeFileEncoder$TupleComparator.compare(BTreeFileEncoder.java:115)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at simpledb.index.BTreeFileEncoder.convertToLeafPage(BTreeFileEncoder.java:554)
+	at simpledb.BTreeLeafPageTest.<clinit>(BTreeLeafPageTest.java:71)
+

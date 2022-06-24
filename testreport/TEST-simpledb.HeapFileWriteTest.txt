@@ -1,0 +1,27 @@
+Testsuite: simpledb.HeapFileWriteTest
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.098 sec
+
+Testcase: addTuple took 0.044 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.common.Utility.createEmptyHeapFile(Utility.java:114)
+	at simpledb.TestUtil$CreateHeapFile.setUp(TestUtil.java:386)
+	at simpledb.HeapFileWriteTest.setUp(HeapFileWriteTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testAlternateEmptyAndFullPagesThenIterate took 0.002 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.common.Utility.createEmptyHeapFile(Utility.java:114)
+	at simpledb.TestUtil$CreateHeapFile.setUp(TestUtil.java:386)
+	at simpledb.HeapFileWriteTest.setUp(HeapFileWriteTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

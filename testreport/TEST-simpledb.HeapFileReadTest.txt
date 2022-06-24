@@ -1,0 +1,60 @@
+Testsuite: simpledb.HeapFileReadTest
+Tests run: 6, Failures: 1, Errors: 5, Skipped: 0, Time elapsed: 0.147 sec
+
+Testcase: getTupleDesc took 0.048 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getTupleDesc(HeapFile.java:67)
+	at simpledb.HeapFileReadTest.getTupleDesc(HeapFileReadTest.java:58)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: numPages took 0.008 sec
+	Caused an ERROR
+expected:<1> but was:<0>
+java.lang.AssertionError: expected:<1> but was:<0>
+	at simpledb.HeapFileReadTest.numPages(HeapFileReadTest.java:65)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: readPage took 0.009 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.HeapFileReadTest.readPage(HeapFileReadTest.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: getId took 0.007 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.HeapFileReadTest.getId(HeapFileReadTest.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testIteratorBasic took 0.011 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.DbFileIterator.hasNext()" because "it" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.DbFileIterator.hasNext()" because "it" is null
+	at simpledb.HeapFileReadTest.testIteratorBasic(HeapFileReadTest.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testIteratorClose took 0.012 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.DbFileIterator.open()" because "it" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.DbFileIterator.open()" because "it" is null
+	at simpledb.HeapFileReadTest.testIteratorClose(HeapFileReadTest.java:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

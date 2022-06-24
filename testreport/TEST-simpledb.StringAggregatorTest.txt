@@ -1,0 +1,25 @@
+Testsuite: simpledb.StringAggregatorTest
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.06 sec
+
+Testcase: mergeCount took 0.007 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.equals(Object)" because the return value of "simpledb.storage.Tuple.getTupleDesc()" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.equals(Object)" because the return value of "simpledb.storage.Tuple.getTupleDesc()" is null
+	at simpledb.storage.TupleIterator.<init>(TupleIterator.java:32)
+	at simpledb.TestUtil.createTupleList(TestUtil.java:83)
+	at simpledb.StringAggregatorTest.createTupleList(StringAggregatorTest.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testIterator took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.equals(Object)" because the return value of "simpledb.storage.Tuple.getTupleDesc()" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.equals(Object)" because the return value of "simpledb.storage.Tuple.getTupleDesc()" is null
+	at simpledb.storage.TupleIterator.<init>(TupleIterator.java:32)
+	at simpledb.TestUtil.createTupleList(TestUtil.java:83)
+	at simpledb.StringAggregatorTest.createTupleList(StringAggregatorTest.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

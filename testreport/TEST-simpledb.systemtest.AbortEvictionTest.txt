@@ -1,0 +1,14 @@
+Testsuite: simpledb.systemtest.AbortEvictionTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.129 sec
+
+Testcase: testDoNotEvictDirtyPages took 0.07 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.equals(Object)" because the return value of "simpledb.storage.Tuple.getTupleDesc()" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.equals(Object)" because the return value of "simpledb.storage.Tuple.getTupleDesc()" is null
+	at simpledb.storage.TupleIterator.<init>(TupleIterator.java:32)
+	at simpledb.systemtest.AbortEvictionTest.insertRow(AbortEvictionTest.java:30)
+	at simpledb.systemtest.AbortEvictionTest.testDoNotEvictDirtyPages(AbortEvictionTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

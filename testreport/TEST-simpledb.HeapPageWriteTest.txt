@@ -1,0 +1,52 @@
+Testsuite: simpledb.HeapPageWriteTest
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.106 sec
+
+Testcase: addTuple took 0.051 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+	at simpledb.storage.HeapPage.getPageData(HeapPage.java:213)
+	at simpledb.storage.HeapPage.setBeforeImage(HeapPage.java:112)
+	at simpledb.storage.HeapPage.<init>(HeapPage.java:68)
+	at simpledb.HeapPageWriteTest.addTuple(HeapPageWriteTest.java:56)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testDirty took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+	at simpledb.storage.HeapPage.getPageData(HeapPage.java:213)
+	at simpledb.storage.HeapPage.setBeforeImage(HeapPage.java:112)
+	at simpledb.storage.HeapPage.<init>(HeapPage.java:68)
+	at simpledb.HeapPageWriteTest.testDirty(HeapPageWriteTest.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: deleteTuple took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+	at simpledb.storage.HeapPage.getPageData(HeapPage.java:213)
+	at simpledb.storage.HeapPage.setBeforeImage(HeapPage.java:112)
+	at simpledb.storage.HeapPage.<init>(HeapPage.java:68)
+	at simpledb.HeapPageWriteTest.deleteTuple(HeapPageWriteTest.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: deleteNonexistentTuple took 0.001 sec
+	Caused an ERROR
+Unexpected exception, expected<simpledb.common.DbException> but was<java.lang.NullPointerException>
+java.lang.Exception: Unexpected exception, expected<simpledb.common.DbException> but was<java.lang.NullPointerException>
+Caused by: java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+	at simpledb.storage.HeapPage.getPageData(HeapPage.java:213)
+	at simpledb.storage.HeapPage.setBeforeImage(HeapPage.java:112)
+	at simpledb.storage.HeapPage.<init>(HeapPage.java:68)
+	at simpledb.HeapPageWriteTest.deleteNonexistentTuple(HeapPageWriteTest.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

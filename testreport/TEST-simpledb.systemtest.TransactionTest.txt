@@ -1,0 +1,58 @@
+Testsuite: simpledb.systemtest.TransactionTest
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.28 sec
+
+Testcase: testTwoThreads took 0.102 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.systemtest.TransactionTest.validateTransactions(TransactionTest.java:45)
+	at simpledb.systemtest.TransactionTest.testTwoThreads(TransactionTest.java:224)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testAllDirtyFails took 0.047 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.equals(Object)" because the return value of "simpledb.storage.Tuple.getTupleDesc()" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.equals(Object)" because the return value of "simpledb.storage.Tuple.getTupleDesc()" is null
+	at simpledb.storage.TupleIterator.<init>(TupleIterator.java:32)
+	at simpledb.systemtest.AbortEvictionTest.insertRow(AbortEvictionTest.java:30)
+	at simpledb.systemtest.TransactionTest.testAllDirtyFails(TransactionTest.java:248)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testSingleThread took 0.007 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.systemtest.TransactionTest.validateTransactions(TransactionTest.java:45)
+	at simpledb.systemtest.TransactionTest.testSingleThread(TransactionTest.java:219)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testTenThreads took 0.005 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.systemtest.TransactionTest.validateTransactions(TransactionTest.java:45)
+	at simpledb.systemtest.TransactionTest.testTenThreads(TransactionTest.java:234)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testFiveThreads took 0.004 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.systemtest.TransactionTest.validateTransactions(TransactionTest.java:45)
+	at simpledb.systemtest.TransactionTest.testFiveThreads(TransactionTest.java:229)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

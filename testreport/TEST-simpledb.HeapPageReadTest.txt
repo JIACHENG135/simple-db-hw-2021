@@ -1,0 +1,51 @@
+Testsuite: simpledb.HeapPageReadTest
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.058 sec
+
+Testcase: getSlot took 0.007 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+	at simpledb.storage.HeapPage.getPageData(HeapPage.java:213)
+	at simpledb.storage.HeapPage.setBeforeImage(HeapPage.java:112)
+	at simpledb.storage.HeapPage.<init>(HeapPage.java:68)
+	at simpledb.HeapPageReadTest.getSlot(HeapPageReadTest.java:117)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: getId took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+	at simpledb.storage.HeapPage.getPageData(HeapPage.java:213)
+	at simpledb.storage.HeapPage.setBeforeImage(HeapPage.java:112)
+	at simpledb.storage.HeapPage.<init>(HeapPage.java:68)
+	at simpledb.HeapPageReadTest.getId(HeapPageReadTest.java:82)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: getNumEmptySlots took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+	at simpledb.storage.HeapPage.getPageData(HeapPage.java:213)
+	at simpledb.storage.HeapPage.setBeforeImage(HeapPage.java:112)
+	at simpledb.storage.HeapPage.<init>(HeapPage.java:68)
+	at simpledb.HeapPageReadTest.getNumEmptySlots(HeapPageReadTest.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testIterator took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getSize()" because "this.td" is null
+	at simpledb.storage.HeapPage.getPageData(HeapPage.java:213)
+	at simpledb.storage.HeapPage.setBeforeImage(HeapPage.java:112)
+	at simpledb.storage.HeapPage.<init>(HeapPage.java:68)
+	at simpledb.HeapPageReadTest.testIterator(HeapPageReadTest.java:90)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

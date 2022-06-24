@@ -1,0 +1,104 @@
+Testsuite: simpledb.BTreeFileDeleteTest
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.131 sec
+
+Testcase: deleteTuple took 0.052 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:211)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:181)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:160)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:122)
+	at simpledb.BTreeFileDeleteTest.deleteTuple(BTreeFileDeleteTest.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testStealFromLeftInternalPage took 0.01 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.index.BTreeUtility.createRandomInternalPage(BTreeUtility.java:363)
+	at simpledb.BTreeFileDeleteTest.testStealFromLeftInternalPage(BTreeFileDeleteTest.java:199)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testStealFromRightLeafPage took 0.003 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.Field.compare(simpledb.execution.Predicate$Op, simpledb.storage.Field)" because the return value of "simpledb.storage.Tuple.getField(int)" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.Field.compare(simpledb.execution.Predicate$Op, simpledb.storage.Field)" because the return value of "simpledb.storage.Tuple.getField(int)" is null
+	at simpledb.index.BTreeFileEncoder$TupleComparator.compare(BTreeFileEncoder.java:134)
+	at simpledb.index.BTreeFileEncoder$TupleComparator.compare(BTreeFileEncoder.java:115)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:234)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at simpledb.index.BTreeFileEncoder.convertToLeafPage(BTreeFileEncoder.java:554)
+	at simpledb.index.BTreeUtility.createRandomLeafPage(BTreeUtility.java:316)
+	at simpledb.BTreeFileDeleteTest.testStealFromRightLeafPage(BTreeFileDeleteTest.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testStealFromRightInternalPage took 0.005 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.index.BTreeUtility.createRandomInternalPage(BTreeUtility.java:363)
+	at simpledb.BTreeFileDeleteTest.testStealFromRightInternalPage(BTreeFileDeleteTest.java:265)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testStealFromLeftLeafPage took 0.002 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.Field.compare(simpledb.execution.Predicate$Op, simpledb.storage.Field)" because the return value of "simpledb.storage.Tuple.getField(int)" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.Field.compare(simpledb.execution.Predicate$Op, simpledb.storage.Field)" because the return value of "simpledb.storage.Tuple.getField(int)" is null
+	at simpledb.index.BTreeFileEncoder$TupleComparator.compare(BTreeFileEncoder.java:134)
+	at simpledb.index.BTreeFileEncoder$TupleComparator.compare(BTreeFileEncoder.java:115)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:234)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at simpledb.index.BTreeFileEncoder.convertToLeafPage(BTreeFileEncoder.java:554)
+	at simpledb.index.BTreeUtility.createRandomLeafPage(BTreeUtility.java:316)
+	at simpledb.BTreeFileDeleteTest.testStealFromLeftLeafPage(BTreeFileDeleteTest.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testMergeLeafPages took 0.001 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.Field.compare(simpledb.execution.Predicate$Op, simpledb.storage.Field)" because the return value of "simpledb.storage.Tuple.getField(int)" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.Field.compare(simpledb.execution.Predicate$Op, simpledb.storage.Field)" because the return value of "simpledb.storage.Tuple.getField(int)" is null
+	at simpledb.index.BTreeFileEncoder$TupleComparator.compare(BTreeFileEncoder.java:134)
+	at simpledb.index.BTreeFileEncoder$TupleComparator.compare(BTreeFileEncoder.java:115)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:234)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at simpledb.index.BTreeFileEncoder.convertToLeafPage(BTreeFileEncoder.java:554)
+	at simpledb.index.BTreeUtility.createRandomLeafPage(BTreeUtility.java:316)
+	at simpledb.BTreeFileDeleteTest.testMergeLeafPages(BTreeFileDeleteTest.java:149)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
+Testcase: testMergeInternalPages took 0.004 sec
+	Caused an ERROR
+Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+java.lang.NullPointerException: Cannot invoke "simpledb.storage.TupleDesc.getFieldType(int)" because "this.td" is null
+	at simpledb.index.BTreeInternalPage.getMaxEntries(BTreeInternalPage.java:123)
+	at simpledb.index.BTreeInternalPage.<init>(BTreeInternalPage.java:75)
+	at simpledb.index.BTreeUtility.createRandomInternalPage(BTreeUtility.java:363)
+	at simpledb.BTreeFileDeleteTest.testMergeInternalPages(BTreeFileDeleteTest.java:331)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+

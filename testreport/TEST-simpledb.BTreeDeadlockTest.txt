@@ -1,0 +1,17 @@
+Testsuite: simpledb.BTreeDeadlockTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.262 sec
+
+Testcase: testReadWriteDeadlock took 0.209 sec
+	Caused an ERROR
+implement this
+java.lang.UnsupportedOperationException: implement this
+	at simpledb.storage.HeapFile.getId(HeapFile.java:57)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:211)
+	at simpledb.index.BTreeFileEncoder.convert(BTreeFileEncoder.java:181)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:160)
+	at simpledb.index.BTreeUtility.createRandomBTreeFile(BTreeUtility.java:122)
+	at simpledb.BTreeDeadlockTest.setUp(BTreeDeadlockTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:76)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:51)
+
