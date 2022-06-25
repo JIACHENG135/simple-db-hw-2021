@@ -55,20 +55,18 @@ public class HeapPage implements Page {
         header = new byte[getHeaderSize()];
         for (int i=0; i<header.length; i++)
             header[i] = dis.readByte();
-        
+
         tuples = new Tuple[numSlots];
         try{
             // allocate and read the actual records of this page
             for (int i=0; i<tuples.length; i++){
                 Tuple tmp = readNextTuple(dis,i);
-                Field f = tmp.dataMap.get(0);
                 tuples[i] = tmp;
             }
 
         }catch(NoSuchElementException e){
             e.printStackTrace();
         }
-        curSlot = 0;
         dis.close();
 
         setBeforeImage();
@@ -77,32 +75,27 @@ public class HeapPage implements Page {
     /** Retrieve the number of tuples on this page.
         @return the number of tuples on this page
     */
-    private int getNumTuples() {        
+    private int getNumTuples() {
         // some code goes here
-
-        // number of tuples, and each tuple need one Byte to store value
-        int tupleByteSize = td.getSize();
-
-        // number of Byte for each page
-        int defaultPageSize = Database.getBufferPool().pageSize;
-
-        // number of page is needed to store all tuples
-        int res = (int) Math.floor( (defaultPageSize * 8 ) / (tupleByteSize*8 + 1) );
-        return res;
+        // Bytes per page, including header
+        int pageSize = BufferPool.getPageSize();
+        // 通过TupleDesc获取每个tuple所占字节数
+        int counts = ((int) Math.floor((pageSize * 8 * 1.0) / (td.getSize() * 8 + 1)));
+        return counts;
 
     }
-
     /**
      * Computes the number of bytes in the header of a page in a HeapFile with each tuple occupying tupleSize bytes
      * @return the number of bytes in the header of a page in a HeapFile with each tuple occupying tupleSize bytes
      */
-    private int getHeaderSize() {        
-        
+    private int getHeaderSize() {
         // some code goes here
-        return (int) Math.ceil(getNumTuples()*1.0/8);
-                 
+        // 注意 * 1.0，否则无法满足要求，因为getNumTuples是整数，直接getNumTuples() / 8得到的是整数
+        int headerSize = (int) Math.ceil(getNumTuples() * 1.0 / 8);
+        return headerSize;
+
     }
-    
+
     /** Return a view of this page before it was modified
         -- used by recovery */
     public HeapPage getBeforeImage(){
@@ -120,7 +113,7 @@ public class HeapPage implements Page {
         }
         return null;
     }
-    
+
     public void setBeforeImage() {
         synchronized(oldDataLock)
         {
@@ -133,7 +126,7 @@ public class HeapPage implements Page {
      */
     public HeapPageId getId() {
     // some code goes here
-        return this.pid;
+        return pid;
     }
 
     /**
@@ -166,7 +159,6 @@ public class HeapPage implements Page {
             e.printStackTrace();
             throw new NoSuchElementException("parsing error!");
         }
-
         return t;
     }
 
@@ -217,7 +209,7 @@ public class HeapPage implements Page {
                 Field f = tuples[i].getField(j);
                 try {
                     f.serialize(dos);
-                
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -295,7 +287,7 @@ public class HeapPage implements Page {
     public TransactionId isDirty() {
         // some code goes here
 	// Not necessary for lab1
-        return null;      
+        return null;
     }
 
     /**
@@ -317,13 +309,15 @@ public class HeapPage implements Page {
      */
     public boolean isSlotUsed(int i) {
         // some code goes here
-        int headerByteArrayIndex = i / 8;
-        int bitIndex = i%8;
-        if(((header[headerByteArrayIndex] >> bitIndex) & 1) == 0){
-            return false;
-        }else{
-            return true;
-        }
+        // header是字节数组,i是位图中第几个槽,所以要限定为到处于哪个字节,再定位位于第几位
+
+        // 找到i所处header字节数组的位置
+        int byteIndex = i / 8;
+        // i处于字节的第几位
+        int bitIndex = i % 8;
+        // 判断该位是否为1
+        int flag = (header[byteIndex] >> bitIndex) & 1;
+        return flag == 1;
     }
 
     /**

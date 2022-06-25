@@ -84,6 +84,10 @@ public class TupleDesc implements Serializable {
         }
     }
 
+    public TupleDesc(){
+        tdItems = new ArrayList<>();
+    }
+
     /**
      * @return the number of fields in this TupleDesc
      */
@@ -144,6 +148,16 @@ public class TupleDesc implements Serializable {
         throw new NoSuchElementException();
     }
 
+    public List<TDItem> getItems(){
+        return this.tdItems;
+    }
+
+    public void setItems(List<TDItem> items){
+        this.tdItems = new ArrayList<>();
+        for(int i = 0;i<items.size();i++) {
+            this.tdItems.add(items.get(i));
+        }
+    }
     /**
      * @return The size (in bytes) of tuples corresponding to this TupleDesc.
      *         Note that tuples from a given TupleDesc are of a fixed size.
